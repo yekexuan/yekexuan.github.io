@@ -11,4 +11,5 @@ pocket: true
 email: false
 
 # Disqus
+disqus: false
 disqus_shortname: 'example'
