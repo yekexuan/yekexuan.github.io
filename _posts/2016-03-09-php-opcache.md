@@ -9,6 +9,8 @@ thumb: http://7xlrln.com1.z0.glb.clouddn.com/blog110539150725a08e0bo.jpg?imageVi
 categories: work
 tags: php
 ---
+
+
 php5.5 以上内建了OpCache，但是默认没有开启。现在需要开启OpCache缓存。
 
 ### 修改php.ini 文件
