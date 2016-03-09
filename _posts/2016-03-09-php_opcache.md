@@ -4,7 +4,7 @@ title: "OpCache使用"
 date: 2016-03-09
 backgrounds:
     - http://7xlrln.com1.z0.glb.clouddn.com/blog11773606558ad19c8eo.jpg
-    -http://7xlrln.com1.z0.glb.clouddn.com/blog110539150725a08e0bo.jpg
+    - http://7xlrln.com1.z0.glb.clouddn.com/blog110539150725a08e0bo.jpg
 thumb: http://7xlrln.com1.z0.glb.clouddn.com/blog110539150725a08e0bo.jpg?imageView2/1/w/200/h/200
 categories: work
 tags: php
