@@ -14,11 +14,11 @@ tags: php
 php5.5 以上内建了OpCache，但是默认没有开启。现在需要开启OpCache缓存。
 
 ### 修改php.ini 文件
-```sh
+```
 sudo vi /etc/php5/fpm/php.ini
 ```
 修改关于OpCache部分配置.
-```sh
+```
 ; 开关打开
 opcache.enable=1
 
@@ -32,13 +32,13 @@ opcache.max_accelerated_files=5000
 opcache.revalidate_freq=240
 ```
 ### 重启服务器，启用新配置
-```sh
+```
 sudo service php5-fpm restart
 sudo service nginx restart
 ```
 ### web界面工具
 在某个可以对外访问目录修改访问权限.
-```sh
+```
 wget https://raw.github.com/amnuts/opcache-gui/master/index.php -O op.php
 ```
 ### 参考
