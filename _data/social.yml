@@ -1,13 +1,13 @@
 # RRSSB
-facebook: true
-twitter: true
-googleplus: true
+facebook: false
+twitter: false
+googleplus: false
 linkedin: false
-reddit: true
-hackernews: true
+reddit: false
+hackernews: false
 pinterest: false
 tumblr: false
-pocket: true
+pocket: false
 email: false
 
 # Disqus
