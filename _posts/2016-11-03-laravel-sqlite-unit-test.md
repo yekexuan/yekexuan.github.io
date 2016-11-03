@@ -1,16 +1,20 @@
 ---
 layout: post
-title: "第三年"
-date: 2016-10-07
+title: "Laravel使用sqlite内存数据库进行单元测试"
+date: 2016-11-03
 backgrounds:
     - http://7xlrln.com1.z0.glb.clouddn.com/1147797807ace133b7o.jpg
 thumb: http://7xlrln.com1.z0.glb.clouddn.com/1147797807ace133b7o.jpg?imageView2/1/w/200/h/200
 categories: life
 tags: home 
 ---
+
 # Laravel使用sqlite内存数据库进行单元测试
+
 ## 配置测试数据库链接
+
 在database.php配置文件中增加如下代码:
+
 ```php
 'connections' => [
     // 新增一种DB链接方式, 使用sqlite内存数据库.
@@ -20,14 +24,20 @@ tags: home
             'prefix'   => '',
         ],
 ] 
+
 ```
+
 ## 修改模式数据库链接方式
+
 修改database.php 中default设置：
+
 ```php
     // 把default链接设置为可配置.
     'default' => env('DB_CONNECTION', 'mysql'),
 ```
+
 ## 设置测试时使用的数据库链接
+
 在phpunit.xml中添加DB_CONNETION的配置:
 ```xml
   <php>
@@ -38,8 +48,11 @@ tags: home
         <env name="DB_CONNECTION" value="testing"/>
     </php> 
 ```
+
 ## 初始化其他设置
+
 由于使用了一些其他插件，需要进行初始化开启或关闭，都可以将参数env配置化，然后再phpunit.xml中初始化,例如关闭APP_DEBUG：
+
 ```xml 
   <php>
         <env name="APP_ENV" value="testing"/>
@@ -51,10 +64,12 @@ tags: home
         <env name="DB_CONNECTION" value="testing"/>
     </php>
 ```
+
 ## 数据库初始化
 由于使用内存数据库，数据无法持久化，因此运行每个测试前必须初始化数据库数据。
 
 #### 使用Migration、factory进行数据初始化
+
 1. 编写Migration类，声明数据库的表结构信息.
 ```php
 <?php
